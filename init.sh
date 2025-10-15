@@ -42,7 +42,5 @@ function start_server() {
     java -jar "fabric-server-launch.jar" nogui
 }
 
-if [ ! -f "/opt/minecraft/fabric-server-launch.jar" ]; then
-  install_fabric
-fi
+install_fabric
 start_server

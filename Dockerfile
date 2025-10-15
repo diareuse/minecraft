@@ -1,13 +1,12 @@
 FROM eclipse-temurin:25-jre-alpine
 
 EXPOSE 25565
-RUN mkdir -p /opt/minecraft && \
-    apk add --no-cache zsh curl su-exec shadow
+RUN mkdir -p /app
+RUN mkdir -p /opt/minecraft
+RUN apk add --no-cache zsh curl su-exec shadow
 
-WORKDIR /opt/minecraft
+WORKDIR /app
 
 COPY init.sh init
 COPY entrypoint.sh entrypoint
-RUN chmod +x init entrypoint
-
-ENTRYPOINT ["zsh","/opt/minecraft/entrypoint"]
+ENTRYPOINT ["/bin/zsh","/app/entrypoint"]
