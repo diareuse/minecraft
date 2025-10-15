@@ -41,7 +41,7 @@ This repository contains the necessary files to build a Docker image for a Minec
 
 ## Image
 
-The Docker image is available on Docker Hub: `diareuse/minecraft-fabric:latest`
+The Docker image is available on Docker Hub: `diareuse/minecraft:fabric`
 
 ## Dependencies
 
@@ -99,7 +99,7 @@ docker run -d \
   -p 25565:25565 \
   -v /path/to/your/minecraft/data:/opt/minecraft \
   --name minecraft-fabric \
-  diareuse/minecraft-fabric:latest
+  diareuse/minecraft:fabric
 ```
 
 #### Windows
@@ -114,7 +114,7 @@ docker run -d \
   -p 25565:25565 \
   -v C:\path\to\your\minecraft\data:/opt/minecraft \
   --name minecraft-fabric \
-  diareuse/minecraft-fabric:latest
+  diareuse/minecraft:fabric
 ```
 
 ### 2. Using `docker-compose`
@@ -124,7 +124,7 @@ Create a `docker-compose.yml` file. This is the same for all operating systems.
 ```yaml
 services:
   minecraft:
-    image: diareuse/minecraft-fabric:latest
+    image: diareuse/minecraft:fabric
     environment:
       - MINECRAFT=${MINECRAFT}
       - FABRIC_LOADER=${FABRIC_LOADER}
