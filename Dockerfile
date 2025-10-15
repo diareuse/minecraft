@@ -1,9 +1,9 @@
-FROM eclipse-temurin:25-jre-alpine
+FROM eclipse-temurin:25-jre-noble
 
 EXPOSE 25565
 RUN mkdir -p /app
 RUN mkdir -p /opt/minecraft
-RUN apk add --no-cache zsh curl su-exec shadow
+RUN apt-get update && apt-get install -y --no-install-recommends zsh curl gosu
 
 WORKDIR /app
 
