@@ -1,6 +1,16 @@
 #!/bin/zsh
 set -ex
 
+handle_signal() {
+  echo "Signal received, terminating child process..."
+  if [ ! -z "$child_pid" ]; then
+    kill -TERM "$child_pid" 2>/dev/null
+  fi
+  exit 0
+}
+
+trap 'handle_signal' SIGTERM SIGINT
+
 PUID=${PUID:-1000}
 PGID=${PGID:-1000}
 
@@ -28,4 +38,7 @@ chown -R minecraft:minecraft /opt/minecraft
 chown -R minecraft:minecraft /app/init
 chmod +x /app/init
 
-exec gosu minecraft /app/init
+gosu minecraft /app/init &
+child_pid=$!
+
+wait "$child_pid"
