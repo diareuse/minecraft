@@ -1,0 +1,30 @@
+version: 2
+updates:
+  - package-ecosystem: "docker"
+    directory: "/java17"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "feat"
+      include: "scope"
+  - package-ecosystem: "docker"
+    directory: "/java21"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "feat"
+      include: "scope"
+  - package-ecosystem: "docker"
+    directory: "/java25"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "feat"
+      include: "scope"
+  - package-ecosystem: "docker"
+    directory: "/latest"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "feat"
+      include: "scope"

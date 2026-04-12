@@ -1,0 +1,75 @@
+name: Monday release
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Find release-please PR
+        id: find_pr
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const { data: prs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 100,
+            });
+
+            const pr = prs.find(p =>
+              p.head.ref.startsWith("release-please--branches--") ||
+              p.title.includes("release-please")
+            );
+
+            if (!pr) {
+              core.setOutput("found", "false");
+              return;
+            }
+
+            core.setOutput("found", "true");
+            core.setOutput("number", String(pr.number));
+
+      - name: Merge release-please PR
+        if: steps.find_pr.outputs.found == 'true'
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const prNumber = Number("${{ steps.find_pr.outputs.number }}");
+
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+            });
+
+            if (pr.draft) {
+              core.setFailed(`Release PR #${prNumber} is still a draft.`);
+              return;
+            }
+
+            if (pr.mergeable_state && pr.mergeable_state !== "clean") {
+              core.setFailed(
+                `Release PR #${prNumber} is not ready to merge. mergeable_state=${pr.mergeable_state}`
+              );
+              return;
+            }
+
+            await github.rest.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              merge_method: "squash",
+            });
+
+      - name: No release PR found
+        if: steps.find_pr.outputs.found != 'true'
+        run: echo "No open release-please PR found; nothing to release."
