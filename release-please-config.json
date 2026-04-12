@@ -2,8 +2,22 @@
   "always-update": true,
   "include-v-in-tag": true,
   "release-type": "simple",
+  "separate-pull-requests": true,
   "packages": {
-    ".": {
+    "java17": {
+      "path": "java17",
+      "changelog-path": "CHANGELOG.md"
+    },
+    "java21": {
+      "path": "java21",
+      "changelog-path": "CHANGELOG.md"
+    },
+    "java25": {
+      "path": "java25",
+      "changelog-path": "CHANGELOG.md"
+    },
+    "latest": {
+      "path": "latest",
       "changelog-path": "CHANGELOG.md"
     }
   },
