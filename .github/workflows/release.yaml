@@ -1,4 +1,4 @@
-name: Monday release
+name: Monday Release
 
 on:
   schedule:
