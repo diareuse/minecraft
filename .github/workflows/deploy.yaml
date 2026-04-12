@@ -17,22 +17,14 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - name: java17
-            dockerfile: java17/Dockerfile
+          - dockerfile: java17/Dockerfile
             image: diareuse/minecraft:fabric-java17
-            versioned_image: diareuse/minecraft:fabric-java17-${GITHUB_REF_NAME}
-          - name: java21
-            dockerfile: java21/Dockerfile
+          - dockerfile: java21/Dockerfile
             image: diareuse/minecraft:fabric-java21
-            versioned_image: diareuse/minecraft:fabric-java21-${GITHUB_REF_NAME}
-          - name: java25
-            dockerfile: java25/Dockerfile
+          - dockerfile: java25/Dockerfile
             image: diareuse/minecraft:fabric-java25
-            versioned_image: diareuse/minecraft:fabric-java25-${GITHUB_REF_NAME}
-          - name: latest
-            dockerfile: latest/Dockerfile
+          - dockerfile: latest/Dockerfile
             image: diareuse/minecraft:fabric
-            versioned_image: diareuse/minecraft:fabric-${GITHUB_REF_NAME}
 
     steps:
       - name: Check out repository
@@ -52,9 +44,10 @@ jobs:
 
       - name: Build and push image
         run: |
+          VERSIONED_IMAGE="${{ matrix.image }}-${GITHUB_REF_NAME}"
           docker buildx build \
             --platform linux/amd64,linux/arm64/v8,linux/riscv64,linux/ppc64le,linux/s390x \
             -t "${{ matrix.image }}" \
-            -t "${{ matrix.versioned_image }}" \
+            -t "${VERSIONED_IMAGE}" \
             -f "${{ matrix.dockerfile }}" \
             --push .
