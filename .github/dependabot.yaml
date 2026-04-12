@@ -7,6 +7,10 @@ updates:
     commit-message:
       prefix: "feat"
       include: "scope"
+    ignore:
+      - dependency-name: "eclipse-temurin"
+        update-types:
+          - "version-update:semver-major"
   - package-ecosystem: "docker"
     directory: "/java21"
     schedule:
@@ -14,6 +18,10 @@ updates:
     commit-message:
       prefix: "feat"
       include: "scope"
+    ignore:
+      - dependency-name: "eclipse-temurin"
+        update-types:
+          - "version-update:semver-major"
   - package-ecosystem: "docker"
     directory: "/java25"
     schedule:
@@ -21,6 +29,10 @@ updates:
     commit-message:
       prefix: "feat"
       include: "scope"
+    ignore:
+      - dependency-name: "eclipse-temurin"
+        update-types:
+          - "version-update:semver-major"
   - package-ecosystem: "docker"
     directory: "/latest"
     schedule:
