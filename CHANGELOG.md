@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/diareuse/minecraft/compare/v1.2.0...v1.3.0) (2026-05-13)
+
+
+### Features
+
+* **deps:** bump eclipse-temurin from `420374e` to `d093fd3` in /java21 ([ad1f563](https://github.com/diareuse/minecraft/commit/ad1f563737ac1f8db719fb5938ac253cc9ab8e14))
+* **deps:** bump eclipse-temurin from `44f34bf` to `420374e` in /java21 ([59fd8a8](https://github.com/diareuse/minecraft/commit/59fd8a86b89acdf31247109c922edb1f5f732b69))
+* **deps:** bump eclipse-temurin from `656533f` to `c7cf8f1` in /latest ([9868095](https://github.com/diareuse/minecraft/commit/98680956dc911d6ba9e482fc6e8f40d548a51f1c))
+* **deps:** bump eclipse-temurin from `91a6899` to `c410ffc` in /java17 ([1dd67ae](https://github.com/diareuse/minecraft/commit/1dd67ae94e32ffe1f7d5f355e172699f48c31ac1))
+* **deps:** bump eclipse-temurin from `c7cf8f1` to `e235925` in /latest ([9800f44](https://github.com/diareuse/minecraft/commit/9800f44d52ed44483724226f6ef48f60ef82614f))
+* **deps:** bump eclipse-temurin from `e235925` to `c2b7ea2` in /latest ([1e428f4](https://github.com/diareuse/minecraft/commit/1e428f4ef425c8208dc95e1a361abf335d80a59d))
+
 ## [1.2.0](https://github.com/diareuse/minecraft/compare/v1.1.0...v1.2.0) (2026-05-08)
 
 
