@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.0](https://github.com/diareuse/minecraft/compare/v1.3.0...v1.4.0) (2026-08-10)
+
+
+### Features
+
+* **deps:** bump eclipse-temurin from `201fbb8` to `12e4462` in /latest ([be8ba12](https://github.com/diareuse/minecraft/commit/be8ba126c28d10cffb61466b7cbad5a42990a922))
+* **deps:** bump eclipse-temurin from `2f1da10` to `fbcf915` in /java25 ([857e18c](https://github.com/diareuse/minecraft/commit/857e18c9c24fcba4d5f3f703c5e9cd36a2964f9b))
+* **deps:** bump eclipse-temurin from `373787d` to `ca39772` in /java21 ([1761cc2](https://github.com/diareuse/minecraft/commit/1761cc26283714fa70d5f97b5dacaebb1d557296))
+* **deps:** bump eclipse-temurin from `543aebd` to `b1e6062` in /java17 ([5b6bb3e](https://github.com/diareuse/minecraft/commit/5b6bb3eab586ed2625c3aaee424a941db21d07d8))
+* **deps:** bump eclipse-temurin from `b27ca47` to `2f1da10` in /java25 ([6d15c96](https://github.com/diareuse/minecraft/commit/6d15c961534555d77efe5d9560fbe4123cf17d55))
+* **deps:** bump eclipse-temurin from `c2b7ea2` to `201fbb8` in /latest ([39ff227](https://github.com/diareuse/minecraft/commit/39ff2278607f1c8f1015577919344f3382a91b80))
+* **deps:** bump eclipse-temurin from `c410ffc` to `543aebd` in /java17 ([bf628b7](https://github.com/diareuse/minecraft/commit/bf628b721786b35e5730edac90e3ab993c2ef5a4))
+* **deps:** bump eclipse-temurin from `d093fd3` to `373787d` in /java21 ([e44ba36](https://github.com/diareuse/minecraft/commit/e44ba36a2a271139ae18c880a875866a8feb4926))
+
 ## [1.3.0](https://github.com/diareuse/minecraft/compare/v1.2.0...v1.3.0) (2026-05-13)
 
 
