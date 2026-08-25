@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.7.0](https://github.com/diareuse/minecraft/compare/v1.6.0...v1.7.0) (2026-08-25)
+
+
+### Features
+
+* **deps:** bump eclipse-temurin from `1a99f30` to `b4c93a5` in /java25 ([7c66168](https://github.com/diareuse/minecraft/commit/7c66168725ee142d2d97f73313e6221faf2ac7c6))
+* **deps:** bump eclipse-temurin from `32861ec` to `e787e08` in /latest ([c72790b](https://github.com/diareuse/minecraft/commit/c72790bca4344d1748dc1575baaa62e9ceac23a7))
+* **deps:** bump eclipse-temurin from `3b76e76` to `5726444` in /java17 ([1b77028](https://github.com/diareuse/minecraft/commit/1b7702802a54f609c0a1c6afd406116a93551607))
+* **deps:** bump eclipse-temurin from `b251c6e` to `9697560` in /java21 ([4e2ad12](https://github.com/diareuse/minecraft/commit/4e2ad12727c500ebe6c87a76c239cf57f8746b06))
+
 ## [1.6.0](https://github.com/diareuse/minecraft/compare/v1.5.0...v1.6.0) (2026-08-21)
 
 
