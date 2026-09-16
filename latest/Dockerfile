@@ -1,4 +1,4 @@
-FROM eclipse-temurin:latest@sha256:dcf835e52330939b6c9f90ecab8aafcbcaa8fbf48423db44de884cf978c10144
+FROM eclipse-temurin:latest@sha256:010ab2b79329b951bf052dbf515843ab345ae4e4f0ef72287d85c9fa54da275f
 
 EXPOSE 25565
 RUN mkdir -p /app
