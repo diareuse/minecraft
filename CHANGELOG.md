@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.15.0](https://github.com/diareuse/minecraft/compare/v1.14.0...v1.15.0) (2026-11-04)
+
+
+### Features
+
+* **deps:** bump eclipse-temurin from `2d5d5e9` to `83f4a7f` in /latest ([aee3720](https://github.com/diareuse/minecraft/commit/aee372087d958022a8b03be70f8095f3c3ae5f72))
+* **deps:** bump eclipse-temurin from `35501d3` to `0eda583` in /java21 ([22c87a5](https://github.com/diareuse/minecraft/commit/22c87a571bdcb81f93e94b12b97c4021097b1464))
+
 ## [1.14.0](https://github.com/diareuse/minecraft/compare/v1.13.0...v1.14.0) (2026-10-30)
 
 
